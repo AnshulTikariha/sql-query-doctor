@@ -1,0 +1,117 @@
+/* Global styles for SQL Query Doctor - Light Theme with Animations */
+
+html, body { 
+  height: 100%; 
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, "Helvetica Neue", sans-serif;
+}
+
+body { 
+  margin: 0; 
+  font-family: 'Segoe UI', Roboto, "Helvetica Neue", sans-serif; 
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #2c3e50;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+/* Custom scrollbar - Light theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
+}
+
+/* Material Design overrides - Light theme */
+.mat-mdc-card {
+  margin-bottom: 20px;
+  background-color: #ffffff !important;
+  color: #2c3e50 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid rgba(52, 152, 219, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.mat-mdc-button {
+  margin-right: 10px;
+}
+
+/* Light theme specific styles */
+.light-theme {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f8f9fa;
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --border-color: #ecf0f1;
+  --accent-color: #3498db;
+  --gradient-primary: #3498db;
+  --gradient-secondary: #9b59b6;
+}
+
+/* Ensure all text in expansion panels is visible */
+.mat-expansion-panel {
+  .mat-expansion-panel-content {
+    .mat-expansion-panel-body {
+      color: #2c3e50 !important;
+    }
+  }
+}
+
+/* Ensure all text in cards is visible */
+.mat-mdc-card-content {
+  color: #2c3e50 !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .mat-mdc-button {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+} 

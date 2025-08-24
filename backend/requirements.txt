@@ -1,0 +1,8 @@
+Flask==2.3.3
+Flask-CORS==4.0.0
+sqlparse==0.4.4
+sqlglot==19.0.0
+Werkzeug==2.3.7
+pytest==7.4.2
+pytest-flask==1.2.0
+gunicorn==21.2.0 
