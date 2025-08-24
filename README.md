@@ -7,7 +7,7 @@ A full-stack application that diagnoses and prescribes improvements for SQL quer
 - **Frontend**: Angular 17 with Material UI for a clean, responsive interface
 - **Backend**: Flask API with SQL analysis capabilities
 - **Analysis**: Detects syntax errors, bad practices, and suggests optimizations
-- **Docker**: Containerized setup for easy development and deployment
+- **Local Development**: Easy setup with Python and Node.js
 
 ## 🏗️ Project Structure
 
@@ -15,27 +15,25 @@ A full-stack application that diagnoses and prescribes improvements for SQL quer
 sql-optimizer/
 ├── frontend/          # Angular 17 application
 ├── backend/           # Flask API server
-├── docker-compose.yml # Docker orchestration
-└── README.md         # This file
+├── README.md         # This file
+└── REQUIRED_SOFTWARE.md # Software requirements
 ```
 
 ## 🛠️ Prerequisites
 
-- Docker and Docker Compose
 - Node.js 18+ (for local development)
 - Python 3.8+ (for local development)
 
-## 🚀 Quick Start with Docker
+## 🚀 Quick Start
 
 1. **Clone and navigate to the project:**
    ```bash
    cd sql-optimizer
    ```
 
-2. **Run the entire stack:**
-   ```bash
-   docker-compose up --build
-   ```
+2. **Follow the setup guide:**
+   - See `REQUIRED_SOFTWARE.md` for detailed installation steps
+   - Or follow the Local Development section below
 
 3. **Access the application:**
    - Frontend: http://localhost:4200
@@ -116,7 +114,7 @@ Analyzes and optimizes SQL queries.
 - Frontend runs on port 4200
 - Backend runs on port 5001
 - CORS is configured for local development
-- All ports can be customized in `docker-compose.yml`
+- All ports can be customized in the respective configuration files
 
 ## 🧪 Testing
 
@@ -134,16 +132,15 @@ python -m pytest
 
 ## 🚀 Deployment
 
-The project includes Docker configurations for easy deployment:
+The project can be deployed using various methods:
 
-1. **Production build:**
-   ```bash
-   docker-compose -f docker-compose.prod.yml up --build
-   ```
+1. **Traditional deployment:**
+   - Deploy backend to a Python hosting service (Heroku, PythonAnywhere, etc.)
+   - Deploy frontend to a static hosting service (Netlify, Vercel, GitHub Pages, etc.)
 
 2. **Environment variables:**
-   - Copy `.env.example` to `.env`
-   - Configure production settings
+   - Configure production settings in your hosting environment
+   - Set up CORS for your production domain
 
 ## 🔮 Future Enhancements
 

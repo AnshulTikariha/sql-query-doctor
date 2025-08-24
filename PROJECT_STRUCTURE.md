@@ -5,16 +5,12 @@
 ```
 sql-optimizer/
 ├── 📁 backend/                          # Flask Backend API
-│   ├── 🐳 Dockerfile                    # Development Docker image
-│   ├── 🐳 Dockerfile.prod               # Production Docker image
 │   ├── 📄 app.py                        # Main Flask application
 │   ├── 📄 sql_analyzer.py               # Core SQL analysis logic
 │   ├── 📄 requirements.txt               # Python dependencies
 │   └── 🧪 test_sql_analyzer.py          # Unit tests
 │
 ├── 📁 frontend/                          # Angular 17 Frontend
-│   ├── 🐳 Dockerfile                    # Development Docker image
-│   ├── 🐳 Dockerfile.prod               # Production Docker image
 │   ├── 📄 nginx.conf                    # Nginx configuration
 │   ├── 📄 package.json                  # Node.js dependencies
 │   ├── 📄 angular.json                  # Angular configuration
@@ -35,13 +31,12 @@ sql-optimizer/
 │       └── 📁 models/                    # TypeScript interfaces
 │           └── 📄 query-analysis.model.ts
 │
-├── 🐳 docker-compose.yml                 # Development Docker setup
-├── 🐳 docker-compose.prod.yml            # Production Docker setup
 ├── 🚀 start.sh                          # Quick start script
 ├── 🧪 run_tests.py                      # Test runner
 ├── 📖 README.md                          # Project documentation
 ├── 🎯 demo.md                            # Demo guide with examples
 ├── 📋 PROJECT_STRUCTURE.md               # This file
+├── 🛠️ REQUIRED_SOFTWARE.md              # Software requirements
 └── 🚫 .gitignore                         # Git ignore rules
 ```
 
@@ -67,10 +62,10 @@ sql-optimizer/
   - Error and warning display
   - Copy-to-clipboard functionality
 
-### Docker Configuration
-- **Development:** Hot-reload with volume mounts
-- **Production:** Multi-stage builds with Nginx
-- **Services:** Frontend (port 4200), Backend (port 5000)
+### Local Development Configuration
+- **Development:** Hot-reload with local servers
+- **Production:** Traditional web hosting deployment
+- **Services:** Frontend (port 4200), Backend (port 5001)
 
 ## 🚀 Quick Start Commands
 
@@ -78,17 +73,15 @@ sql-optimizer/
 # Start the entire stack
 ./start.sh
 
-# Or manually with Docker Compose
-docker-compose up --build
+# Or manually start services
+cd backend && python app.py &
+cd frontend && npm start
 
 # Run backend tests
 python run_tests.py
 
-# View logs
-docker-compose logs -f
-
-# Stop services
-docker-compose down
+# Run frontend tests
+cd frontend && npm test
 ```
 
 ## 🔧 Key Features
@@ -184,14 +177,14 @@ docker-compose down
 ## 📱 Deployment Options
 
 ### Development
-- Docker Compose with hot-reload
-- Local development servers
+- Local development servers with hot-reload
 - Easy debugging and testing
+- Virtual environments for Python
 
 ### Production
-- Multi-stage Docker builds
-- Nginx reverse proxy
-- Gunicorn WSGI server
+- Traditional web hosting deployment
+- Nginx or Apache web server
+- Gunicorn WSGI server for Python
 - Environment-based configuration
 
 ---

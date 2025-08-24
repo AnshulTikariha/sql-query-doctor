@@ -124,23 +124,23 @@ The system is designed to be easily extensible:
 ## 🚨 Troubleshooting
 
 ### Common Issues:
-1. **Port conflicts:** Check if ports 4200 or 5000 are in use
-2. **Docker issues:** Ensure Docker is running and has sufficient resources
+1. **Port conflicts:** Check if ports 4200 or 5001 are in use
+2. **Service issues:** Ensure both backend and frontend services are running
 3. **CORS errors:** Backend CORS is configured for localhost development
 
 ### Debug Commands:
 ```bash
-# View logs
-docker-compose logs -f
+# Check backend logs
+cd backend && python app.py
 
-# Restart services
-docker-compose restart
+# Check frontend logs
+cd frontend && npm start
 
-# Rebuild and restart
-docker-compose up --build -d
+# Restart backend service
+# Stop current process (Ctrl+C) and restart
 
-# Stop all services
-docker-compose down
+# Restart frontend service
+# Stop current process (Ctrl+C) and restart
 ```
 
 ## 🎉 Have Fun!
